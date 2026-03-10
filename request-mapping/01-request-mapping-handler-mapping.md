@@ -547,6 +547,6 @@ MappingRegistry 구조
 
 <div align="center">
 
-**[⬅️ 이전: Chapter 1 — ViewResolver 메커니즘](../dispatcher-servlet/07-view-resolver-mechanism.md)** | **[홈으로 🏠](../README.md)** | **[다음: RequestMappingInfo 생성과 매칭 ➡️](./02-request-mapping-info.md)**
+**[홈으로 🏠](../README.md)** | **[다음: RequestMappingInfo 생성과 매칭 ➡️](./02-request-mapping-info.md)**
 
 </div>
