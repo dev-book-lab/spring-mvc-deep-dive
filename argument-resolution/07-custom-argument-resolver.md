@@ -496,6 +496,6 @@ MethodParameter 주요 메서드
 
 <div align="center">
 
-**[⬅️ 이전: Servlet API 주입](./06-servlet-api-injection.md)** | **[홈으로 🏠](../README.md)** | **[다음: Chapter 4 — Response Handling ➡️](../response-handling/01-return-value-handler.md)**
+**[⬅️ 이전: Servlet API 주입](./06-servlet-api-injection.md)** | **[홈으로 🏠](../README.md)** | **[다음: Chapter 4 — Response Handling ➡️](../response-handling/01-return-value-handler-chain.md)**
 
 </div>
