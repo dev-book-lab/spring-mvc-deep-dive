@@ -33,7 +33,7 @@ Spring MVC에 관한 자료는 넘쳐납니다. 하지만 대부분은 **"어떻
 | "`@RestController`를 붙이면 JSON으로 응답됩니다" | `DispatcherServlet` → `HandlerAdapter` → `HttpMessageConverter` 전 과정, Jackson이 객체를 직렬화하는 정확한 시점 |
 | "`@RequestBody`로 요청 본문을 받습니다" | `RequestResponseBodyMethodProcessor`가 `MappingJackson2HttpMessageConverter`를 선택해 역직렬화하는 내부 코드 |
 | "`@ExceptionHandler`로 예외를 처리합니다" | `ExceptionHandlerExceptionResolver`가 `@ControllerAdvice` Bean에서 핸들러 메서드를 탐색하는 매칭 알고리즘 |
-| "`@PathVariable`로 URL 변수를 받습니다" | `UriTemplateVariablesHandlerInterceptor`가 템플릿을 추출하는 시점과 `HandlerMethodArgumentResolver` 체인에서 바인딩되는 과정 |
+| "`@PathVariable`로 URL 변수를 받습니다" | `RequestMappingHandlerMapping.handleMatch()`에서 `PathPattern.matchAndExtract()`로 템플릿 변수를 추출해 `URI_TEMPLATE_VARIABLES_ATTRIBUTE`에 저장하는 시점과 `HandlerMethodArgumentResolver` 체인에서 바인딩되는 과정 |
 | "인터셉터로 공통 로직을 처리합니다" | `preHandle → postHandle → afterCompletion` 각 호출 시점과 예외 발생 시 실행 보장 여부, Filter와의 정확한 차이 |
 | 이론 나열 | 실행 가능한 코드 + Spring MVC 소스코드 직접 추적 + curl 명령어 실험 + MockMvc 검증 |
 
@@ -294,10 +294,10 @@ Day 7  Ch7-06  WebMvcConfigurer 커스터마이징 가이드
 | 🔍 **왜 이 메커니즘이 존재하는가** | 문제 상황과 설계 배경 |
 | 😱 **흔한 오해 또는 실수** | Before — 많은 개발자가 틀리는 방식 |
 | ✨ **올바른 이해와 사용** | After — 원리를 알고 난 후의 올바른 접근 |
-| 🔬 **내부 동작 원리** | Spring MVC 소스코드 직접 추적 + 다이어그램 |
+| 🔬 **내부 동작 원리** | Spring MVC 소스코드 직접 추적 + ASCII 구조도 |
 | 💻 **실험으로 확인하기** | curl 명령어 + MockMvc + 디버거 브레이크포인트 |
 | 🌐 **HTTP 레벨 분석** | Request/Response 헤더 직접 분석 |
-| 🤔 **트레이드오프** | 이 설계의 장단점, 언제 다른 방법을 택할 것인가 |
+| ⚖️ **트레이드오프** | 이 설계의 장단점, 언제 다른 방법을 택할 것인가 |
 | 📌 **핵심 정리** | 한 화면 요약 |
 | 🤔 **생각해볼 문제** | 개념을 더 깊이 이해하기 위한 질문 + 해설 |
 
