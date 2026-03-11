@@ -518,6 +518,6 @@ removeSemicolonContent=true (기본) 목적
 
 <div align="center">
 
-**[⬅️ 이전: URI Template Variables 추출](./06-uri-template-variables.md)** | **[홈으로 🏠](../README.md)** | **[다음: Chapter 3 — Argument Resolution ➡️](../argument-resolution/01-handler-method-argument-resolver.md)**
+**[⬅️ 이전: URI Template Variables 추출](./06-uri-template-variables.md)** | **[홈으로 🏠](../README.md)** | **[다음: Chapter 3 — Argument Resolution ➡️](../argument-resolution/01-argument-resolver-chain.md)**
 
 </div>
