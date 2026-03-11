@@ -377,6 +377,6 @@ cause 탐색
 
 <div align="center">
 
-**[⬅️ 이전: RFC 7807 Problem Details](./05-problem-details-response.md)** | **[홈으로 🏠](../README.md)** | **[다음: Chapter 6 — Interceptor & Filter ➡️](../interceptor-filter/01-handler-interceptor-lifecycle.md)**
+**[⬅️ 이전: RFC 7807 Problem Details](./05-problem-details-response.md)** | **[홈으로 🏠](../README.md)** | **[다음: Chapter 6 — Interceptor & Filter ➡️](../interceptor-filter/01-filter-vs-interceptor.md)**
 
 </div>
